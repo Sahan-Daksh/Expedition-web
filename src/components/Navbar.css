@@ -1,0 +1,11 @@
+.navbar-link {
+    @apply text-gray-900 hover:text-[#3CA6A6]; /* Adjust colors as needed */
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  .navbar-link-group {
+    display: flex;
+    flex-direction: row; /* Adjust to column if needed */
+    gap: 1.5rem; /* Adjust the gap value as needed */
+  }
