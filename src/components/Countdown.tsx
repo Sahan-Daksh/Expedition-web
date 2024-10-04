@@ -5,26 +5,21 @@ import "../../css/components/Countdown.css";
 
 const Countdown = () => {
   const targetDate = new Date("2024-10-26T05:29:59").getTime(); // Change this to your target date
-  const [timeRemaining, setTimeRemaining] = useState(null); // Start with null
+  const [timeRemaining, setTimeRemaining] = useState<number>(targetDate - Date.now()); // Start with initial number
 
   useEffect(() => {
-    // Initialize timeRemaining when the component mounts
-    const initialTimeRemaining = targetDate - Date.now();
-    setTimeRemaining(initialTimeRemaining);
-
     const updateCountdown = () => {
       setTimeRemaining(targetDate - Date.now());
     };
 
+    // Update the countdown every second
     const intervalId = setInterval(updateCountdown, 1000);
+    
+    // Clean up the interval on component unmount
     return () => clearInterval(intervalId);
   }, [targetDate]);
 
-  // Return early if timeRemaining is not set yet
-  if (timeRemaining === null) {
-    return null; // or a loading state if preferred
-  }
-
+  // Calculate remaining time
   const getTime = () => {
     const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
     const hours = Math.floor(
