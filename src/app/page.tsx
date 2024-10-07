@@ -10,6 +10,7 @@ import CustomizedTimeline from "@/components/Timeline";
 
 // Import type for Metadata
 import type { Metadata } from "next";
+import { Cta } from "@/components/Cta";
 
 // Define metadata for the page
 export const metadata: Metadata = {
@@ -29,7 +30,10 @@ export default function Home() {
 
       {/* Uncomment if you want to display Benefits section */}
       {/* <Benefits data={benefitOne} /> */}
-
+      <SectionTitle title="Get Involved">
+      Dive into the excitement—become a part of the Expedition journey!
+      </SectionTitle>
+      <Cta/>
       <SectionTitle title="Timeline">
       Explore our schedule and see what we have planned for the Expedition series!
       </SectionTitle>
