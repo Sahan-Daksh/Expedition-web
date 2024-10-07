@@ -8,7 +8,7 @@ export function NavBar() {
   return (
     <Navbar fluid rounded>
       <Navbar.Brand>
-        <img src="./img/logo.png" className="mr-3 h-6 sm:h-16" alt="ISACA Logo" />
+        <img src="./img/logo.png" className="mr-3 h-6 sm:h-16" alt="Expedition Logo" />
       </Navbar.Brand>
       <div className="flex md:order-2 ml-2">
         <Button>Register for IEEEXtreme</Button>

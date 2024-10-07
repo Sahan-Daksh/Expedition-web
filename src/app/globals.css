@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-
+body {
+    background-image: url('../../public/img/textured-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+  }
 
 

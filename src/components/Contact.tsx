@@ -1,8 +1,9 @@
 import {Card, Label, Textarea, Button, TextInput } from "flowbite-react";
+import "./Contact.css";
 
 export function Contact() {
   return (
-    <>
+    
     <form className="flex max-w-md flex-col gap-4 ml-[35%] py-10">
       <div>
         <div className="mb-2 block">
@@ -25,13 +26,13 @@ export function Contact() {
       <div className="max-w-md">
       <div className="mb-2 block">
         <Label htmlFor="comment" value="Your message" />
-        </div>
+      </div>
       <Textarea id="comment" placeholder="Leave a comment..." required rows={6} />
       </div>
       <Button type="submit">Submit</Button>
     </form>
     
-    </>
+    
     
   );
 }
