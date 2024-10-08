@@ -28,8 +28,6 @@ export default function Home() {
       </SectionTitle>
       <About /> */}
 
-      {/* Uncomment if you want to display Benefits section */}
-      {/* <Benefits data={benefitOne} /> */}
       <SectionTitle title="Get Involved">
       Dive into the excitement—become a part of the Expedition journey!
       </SectionTitle>
