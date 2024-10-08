@@ -59,7 +59,7 @@ export default function Phases() {
     <Box padding="20px">
       <Timeline position="alternate">
         {events.map((event, index) => (
-          <TimelineItem key={index} sx={{ minHeight: "100px" }}>
+          <TimelineItem key={index} sx={{ minHeight: "120px" }}>
             <TimelineSeparator>
               <TimelineDot
                 color="primary"
@@ -97,11 +97,11 @@ export default function Phases() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <Typography variant="h6" component="span" sx={{ color: "black" }}>
+                <Typography variant="h5" component="span" sx={{ color: "black" }} fontWeight="bold">
                   {event.title}
                 </Typography>
                 <Typography
-                  variant="body2"
+                  variant="h6"
                   sx={{
                     color: "black", // Changed from theme to direct color
                     ml: index % 2 === 0 ? 2 : 0,

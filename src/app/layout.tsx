@@ -23,6 +23,9 @@ const theme = createTheme({
       main: '#dc004e', // Example secondary color
     },
   },
+  typography: {
+    fontFamily: 'Helvetica, Arial, sans-serif',
+  },
 });
 
 // export const metadata: Metadata = {
