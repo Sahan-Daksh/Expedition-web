@@ -44,8 +44,8 @@ export function Cta() {
       Prepare for Haxpedition with Our Road to Haxpedition Program
       </h5>
       <p className="font-normal text-gray-700 dark:text-gray-400">
-      Get ready for Haxpedition with our 'Road to Haxpedition' program! Each week, tackle easy and intermediate challenges that will sharpen your problem-solving skills. Join us on this journey and elevate your readiness for the hackathon!
-      </p>
+  Get ready for Haxpedition with our &apos;Road to Haxpedition&apos; program! Each week, tackle easy and intermediate challenges that will sharpen your problem-solving skills. Join us on this journey and elevate your readiness for the hackathon!
+</p>
       <Button>
       Join the Road to Haxpedition
         <svg className="-mr-1 ml-2 h-4 w-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
