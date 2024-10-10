@@ -21,9 +21,12 @@ export function Hero() {
         <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 transition duration-200 rounded-lg text-white shadow-[0px_2px_0px_0px_#FFFFFF40_inset]">
             Join IEEE
           </button>
-          <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 transition duration-200 rounded-lg text-white shadow-[0px_2px_0px_0px_#FFFFFF40_inset]">
+          <button 
+            className="px-4 py-2 bg-blue-600 hover:bg-blue-700 transition duration-200 rounded-lg text-white shadow-[0px_2px_0px_0px_#FFFFFF40_inset]" 
+            onClick={() => window.open('https://forms.gle/6oDTq2EBWnbJasoY9', '_blank')}>
             Register for IEEEXtreme
           </button>
+
         </div>
       </Vortex>
     </div>

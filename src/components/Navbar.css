@@ -1,5 +1,10 @@
 .navbar-link {
-    @apply text-gray-900 hover:text-[#3CA6A6]; /* Adjust colors as needed */
+        color: #1F2937; /* text-gray-900 */
+        transition: color 0.3s;
+    }
+    
+    .navbar-link:hover {
+        color: #3CA6A6; /* hover:text-[#3CA6A6] */
     padding: 0.5rem 1rem;
     font-size: 1rem;
   }
