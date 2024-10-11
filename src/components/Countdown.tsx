@@ -40,28 +40,28 @@ const Countdown = () => {
       <div className="countdown-content flex flex-col items-center">
         <div className="countdown-time-units">
           <div className="countdown-time-unit">
-            <p className="countdown-time-label">DAYS</p> <br />
-            <p className="countdown-time-value">
+            <p className="countdown-time-label ">DAYS</p> <br />
+            <p className="countdown-time-value py-10">
               {String(days).padStart(2, "0")}
             </p>
           </div>
           <div className="countdown-time-unit">
             <p className="countdown-time-label">HOURS</p> <br />
-            <p className="countdown-time-value">
+            <p className="countdown-time-value py-10">
               {String(hours).padStart(2, "0")}
             </p>
           </div>
           <div className="countdown-time-unit">
             <p className="countdown-time-label">MINUTES</p>
             <br />
-            <p className="countdown-time-value">
+            <p className="countdown-time-value py-10">
               {String(minutes).padStart(2, "0")}
             </p>
           </div>
           <div className="countdown-time-unit">
             <p className="countdown-time-label">SECONDS</p>
             <br />
-            <p className="countdown-time-value">
+            <p className="countdown-time-value py-10">
               {String(seconds).padStart(2, "0")}
             </p>
           </div>

@@ -19,7 +19,6 @@ export function NavBar() {
         <Link href="#"  className="navbar-link">Home</Link>
         <Link href="#" className="navbar-link">About</Link>
         <Link href="#"  className="navbar-link">Timeline</Link>
-        <Link href="#"  className="navbar-link">Partners</Link>
         <Link href="#"  className="navbar-link">FAQ</Link>
         <Link href="#"  className="navbar-link">Contact</Link>
         </NavbarCollapse>

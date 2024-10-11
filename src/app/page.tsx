@@ -1,15 +1,23 @@
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/Hero";
 import { SectionTitle } from "@/components/SectionTitle";
-import { Faq } from "@/components/Faq";
+import Faq from "@/components/Faq";
+import Countdown from "@/components/Countdown";
+import ScrollToTop from "@/components/ScrollToTop";
+import StartupBanner from "@/components/StartupBanner";
 
 import { benefitOne} from "@/components/data";
-import { Contact } from "@/components/Contact";
-import { About } from "@/components/About";
+import Contact from "@/components/Contact";
+import About from "@/components/About";
+import Timeline from "@/components/Timeline";
 export default function Home() {
   return (
     <Container>
       <Hero />
+      <About />
+      <Timeline />
+      <StartupBanner />
+      
       {/* <SectionTitle title="About Expedition">
         <br/>
       </SectionTitle>
@@ -18,16 +26,15 @@ export default function Home() {
       {/* <Benefits data={benefitOne} /> */}
 
 
-      <SectionTitle title="Contact Us">
-      Have questions? Want to get involved? Reach out to us today!
-      </SectionTitle>
-      <Contact/>
+      
+      
       <SectionTitle title="Frequently Asked Questions">
-      Answers to Help You Navigate the Expedition Series
       </SectionTitle>
-
-
       <Faq />
+      <Contact/>
+
+
+      
       
     </Container>
   );

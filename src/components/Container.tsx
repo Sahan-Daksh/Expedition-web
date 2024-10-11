@@ -10,7 +10,7 @@ export function Container(props: Readonly<ContainerProps>) {
   return (
     
     <div
-      className={`container p-1 mx-auto xl:px-0 ${
+      className={` p-0 w-auto  xl:px-0 ${
         props.className ? props.className : ""
       }`}>
       {props.children}

@@ -1,56 +1,78 @@
 "use client";
-import React from "react";
-import { Container } from "@/components/Container";
-import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
-import { ChevronUpIcon } from "@heroicons/react/24/solid";
+import { useState } from 'react';
 
-export const Faq = () => {
-  return (
-    <Container className="!p-0">
-      <div className="w-full max-w-2xl p-2 mx-auto rounded-2xl">
-        {faqdata.map((item, index) => (
-          <div key={item.question} className="mb-5">
-            <Disclosure>
-              {({ open }) => (
-                <>
-                  <DisclosureButton className="flex items-center justify-between w-full px-4 py-4 text-lg text-left text-gray-800 rounded-lg bg-gray-50 hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-indigo-100 focus-visible:ring-opacity-75 dark:bg-trueGray-800 dark:text-gray-200">
-                    <span>{item.question}</span>
-                    <ChevronUpIcon
-                      className={`${
-                        open ? "transform rotate-180" : ""
-                      } w-5 h-5 text-indigo-500`}
-                    />
-                  </DisclosureButton>
-                  <DisclosurePanel className="px-4 pt-4 pb-2 text-gray-500 dark:text-gray-300">
-                    {item.answer}
-                  </DisclosurePanel>
-                </>
-              )}
-            </Disclosure>
-          </div>
-        ))}
-      </div>
-    </Container>
-  );
+interface FAQItem {
+  question: string;
+  answer: string;
 }
 
-const faqdata = [
-  {
-    question: "What is the Expedition event series about?",
-    answer: "The Expedition event series is a month-long celebration that includes IEEE Day and the IEEEXtreme coding competition. It features activities like a pre-hackathon and is designed to encourage student innovation and collaboration.",
-  },
-  {
-    question: "How can I register for IEEE membership?",
-    answer: "You can register for IEEE membership by clicking the \"Become a Member\" button on our homepage, which will take you directly to the IEEE membership form.",
-  },
-  {
-    question: "Who can participate in IEEEXtreme?",
-    answer:
-      "IEEEXtreme is open to all IEEE student members who are enrolled in a recognized academic institution. Teams consist of up to three members, and all participants must be IEEE members.",
-  },
-  {
-    question: "What is the deadline for IEEEXtreme registration?",
-    answer:
-      "The registration for IEEEXtreme closes on [Insert Date]. Be sure to sign up before this date to secure your spot in the competition.",
-  },
-];
+const FAQ: React.FC = () => {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  const faqItems: FAQItem[] = [
+    {
+      question: 'How many people can be there in a team?',
+      answer: 'Teams can have a minimum of 2 and a maximum of 3 members.',
+    },
+    {
+      question: 'Who can participate in IEEE Xtreme 18.0??',
+      answer: 'To participate, all team members must have an active IEEE global student membership and be part of the same IEEE Student Branch.',
+    },
+    {
+      question: 'What kinds of challenges will participants face?',
+      answer: 'Participants will solve a wide range of algorithmic problems designed to test their programming skills.',
+    },
+    {
+      question: 'Does IEEE Xtreme 18.0 require any prior competitive programming experience?',
+      answer: 'No prior experience is required, but basic coding knowledge will be beneficial.',
+    },
+    {
+      question: 'Can a team consist of participants from different Student Branches?',
+      answer: 'No, all team members must belong to the same IEEE Student Branch.',
+    },
+    {
+      question: 'Do participants need to attend in person?',
+      answer: 'Teams can participate either physically at their Student Branch or online, as IEEE Xtreme 18.0 is a global competition.',
+    },
+    {
+      question: 'Will I get a certificate of participation?',
+      answer: 'Yes, participants who solve at least one problem correctly will receive a certificate of participation.',
+    },
+    {
+      question: 'How can I register for IEEE Xtreme 18.0?',
+      answer: 'You can register via the official IEEE Xtreme 18.0 website.',
+    },
+  ];
+
+  const handleClick = (index: number) => {
+    setActiveIndex(index === activeIndex ? null : index);
+  };
+
+  return (
+    <div className="w-full max-w-xl mx-auto bg-gray-900 p-6 rounded-lg">
+     
+      {faqItems.map((item, index) => (
+        <div key={index} className="border-b border-gray-700 py-2">
+          <div
+            className="flex justify-between items-center cursor-pointer text-white text-lg font-semibold"
+            onClick={() => handleClick(index)}
+          >
+            {item.question}
+            <span className="text-2xl">
+              {activeIndex === index ? '−' : '+'}
+            </span>
+          </div>
+          <div
+            className={`mt-2 overflow-hidden transition-all duration-300 ${
+              activeIndex === index ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
+            }`}
+          >
+            <p className="text-white mt-2">{item.answer}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default FAQ;
