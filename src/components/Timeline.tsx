@@ -114,6 +114,66 @@ const Timeline: React.FC = () => {
             </div>
           </div>
 
+          {/* Event 2 */}
+          <div
+            className={`mb-4 flex justify-start transition-transform duration-700 ease-out ${
+              isInView ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"
+            }`}
+          >
+            <div className="relative w-1/2">
+              <div className="bg-white text-blue-900 px-4 py-2 rounded-md shadow-md text-sm">
+                AWARENESS SESSION
+              </div>
+              <div className="absolute top-1/2 right-0 transform translate-x-2 -translate-y-1/2">
+                <div className="w-3 h-3 bg-[#2574DD] rounded-full border-4 border-white"></div>
+              </div>
+              {/* Date */}
+              <div className="absolute -top-6 left-0 transform -translate-y-1/2 text-blue-900 text-lg">
+                <span>September 28</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Event 2 */}
+          <div
+            className={`mb-4 flex justify-end transition-transform duration-700 ease-out delay-100 ${
+              isInView ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"
+            }`}
+          >
+            <div className="relative w-1/2">
+              <div className="bg-white text-blue-900 px-4 py-2 rounded-md shadow-md text-sm">
+                IEEE DAY
+              </div>
+              <div className="absolute top-1/2 left-0 transform -translate-x-2 -translate-y-1/2">
+                <div className="w-3 h-3 bg-[#2574DD] rounded-full border-4 border-white"></div>
+              </div>
+              {/* Date */}
+              <div className="absolute -top-6 right-0 transform -translate-y-1/2 text-blue-900 text-lg">
+                <span>October 5</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Event 2 */}
+          <div
+            className={`mb-4 flex justify-start transition-transform duration-700 ease-out ${
+              isInView ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"
+            }`}
+          >
+            <div className="relative w-1/2">
+              <div className="bg-white text-blue-900 px-4 py-2 rounded-md shadow-md text-sm">
+                AWARENESS SESSION
+              </div>
+              <div className="absolute top-1/2 right-0 transform translate-x-2 -translate-y-1/2">
+                <div className="w-3 h-3 bg-[#2574DD] rounded-full border-4 border-white"></div>
+              </div>
+              {/* Date */}
+              <div className="absolute -top-6 left-0 transform -translate-y-1/2 text-blue-900 text-lg">
+                <span>September 28</span>
+              </div>
+            </div>
+          </div>
+
           {/* Continue for the rest of the events */}
         </div>
       </div>

@@ -10,8 +10,8 @@ export function NavBar() {
       <Navbar.Brand>
         <img src="./img/logo.png" className="mr-3 h-6 sm:h-16" alt="Expedition Logo" />
       </Navbar.Brand>
-      <div className="flex md:order-2 ml-2">
-        <Button>Register for IEEEXtreme</Button>
+      <div className="flex md:order-2 ml-2 ">
+      <Button className="cursor-not-allowed">REGISTRATIONS CLOSED</Button>
         <Navbar.Toggle />
       </div>
       <div className="navbar-link-group">

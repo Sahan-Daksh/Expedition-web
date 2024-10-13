@@ -28,8 +28,7 @@ export default function Home() {
 
       
       
-      <SectionTitle title="Frequently Asked Questions">
-      </SectionTitle>
+      
       <Faq />
       <Contact/>
 
