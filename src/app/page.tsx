@@ -3,7 +3,6 @@ import { Hero } from "@/components/Hero";
 import { SectionTitle } from "@/components/SectionTitle";
 import Faq from "@/components/Faq";
 import Countdown from "@/components/Countdown";
-import ScrollToTop from "@/components/ScrollToTop";
 import StartupBanner from "@/components/StartupBanner";
 
 import { benefitOne} from "@/components/data";
