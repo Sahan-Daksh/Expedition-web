@@ -3,11 +3,9 @@
 @tailwind utilities;
 
 body {
-    background-image: url('../../public/img/textured-bg.jpg');
-    background-size: cover;
-    background-position: center;
     margin: 0;
     padding: 0;
-  }
+    @apply bg-gradient-to-b from-[#e0f7ff] to-[#f0f4f8] text-white;
+}
 
 

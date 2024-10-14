@@ -15,7 +15,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className="flex flex-col lg:flex-row bg-gradient-to-b from-[#e0f7ff] to-[#f0f4f8] text-white py-4 px-6 lg:px-20 items-center justify-between min-h-[80vh]"> {/* Reduced py to 4 and adjusted min height */}
+    <div className="flex flex-col lg:flex-row bg-gradient-to-b from-[#e0f7ff] to-[#f0f4f8] text-white py-4 px-6 lg:px-20 items-center justify-between min-h-[60vh]"> {/* Reduced py to 4 and adjusted min height */}
       <div className={`w-full lg:w-1/3 text-center mb-8 lg:mb-0 transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
         <Image
           src="/img/DSC_0148.jpg"

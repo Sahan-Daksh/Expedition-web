@@ -10,12 +10,16 @@ import { benefitOne} from "@/components/data";
 import Contact from "@/components/Contact";
 import About from "@/components/About";
 import Timeline from "@/components/Timeline";
+import { Cta } from "@/components/Cta";
+import Phases from "@/components/TimelineNew";
 export default function Home() {
   return (
     <Container>
       <Hero />
       <About />
+      <Cta />
       <Timeline />
+      <Phases/>
       <StartupBanner />
       
       {/* <SectionTitle title="About Expedition">
