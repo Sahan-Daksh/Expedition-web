@@ -17,14 +17,8 @@ export default function Home() {
     <Container>
       <Hero />
       <About />
-      <SectionTitle title="Get Involved">
-      Dive into the excitement—become a part of the Expedition journey!
-      </SectionTitle>
       <Cta />
       <Timeline />
-      <SectionTitle title="Timeline">
-      Explore our schedule and see what we have planned for the Expedition series!
-      </SectionTitle>
       <Phases/>
       <StartupBanner />
       

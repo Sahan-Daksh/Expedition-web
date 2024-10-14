@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React from "react";
 import Timeline from "@mui/lab/Timeline";
@@ -14,6 +14,7 @@ import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { motion } from "framer-motion";
+import { SectionTitle } from "@/components/SectionTitle"; // Adjust the import path as necessary
 
 interface Event {
   time: string;
@@ -56,7 +57,17 @@ export default function Phases() {
   ];
 
   return (
-    <Box padding="20px">
+    <Box
+      padding="20px"
+      sx={{
+        background: 'linear-gradient(to bottom, #e0f7ff, #f0f4f8)', // Apply the gradient background
+        borderRadius: '8px', // Optional: Add some rounding to the corners
+      }}
+    >
+      <SectionTitle title="Timeline">
+      Explore our schedule and see what we have planned for the Expedition series!
+      </SectionTitle>
+      
       <Timeline position="alternate">
         {events.map((event, index) => (
           <TimelineItem key={index} sx={{ minHeight: "120px" }}>
@@ -64,7 +75,7 @@ export default function Phases() {
               <TimelineDot
                 color="primary"
                 sx={{
-                  backgroundColor: "#2574DD", // Changed from theme to direct color
+                  backgroundColor: "#2574DD",
                   transform: "scale(1.5)",
                 }}
               >
