@@ -1,11 +1,29 @@
+"use client"; // Ensure this is a Client Component
+
+import React, { useState, useEffect } from 'react';
+
 const StartupBanner = () => {
+  // State to control loading
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Simulate loading effect with a timeout
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 500); // Adjust the delay as needed
+  }, []);
+
   return (
     <div className="bg-gradient-to-b from-[#e0f7ff] to-[#f0f4f8] text-white h-screen flex items-center justify-center relative overflow-hidden mt-[-20px]">
       {/* Background overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#e0f7ff] to-[#f0f4f8] opacity-50"></div>
 
-      {/* Main content */}
-      <div className="z-10 flex flex-col items-center space-y-8 px-4 text-center">
+      {/* Main content with slide-down effect */}
+      <div
+        className={`z-10 flex flex-col items-center space-y-8 px-4 text-center transform transition-transform duration-1000 ease-out ${
+          isLoading ? '-translate-y-full opacity-0' : 'translate-y-0 opacity-100'
+        }`}
+      >
         <h1 className="text-4xl md:text-6xl font-bold text-black drop-shadow-lg">
           Enlist to the battle of startups!
         </h1>
@@ -26,7 +44,7 @@ const StartupBanner = () => {
         </div>
 
         {/* Decorative elements */}
-        
+
       </div>
     </div>
   );
